@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SERVICE:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SERVICE_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SERVICE" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:6.0.5" />
+          <element id="library" level="project" name="javax.ws.rs-api-2.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="SERVICE/web/Web" />
+    </root>
+  </artifact>
+</component>
