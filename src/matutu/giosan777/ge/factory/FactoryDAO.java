@@ -3,9 +3,7 @@ package matutu.giosan777.ge.factory;
 import matutu.giosan777.ge.DAO.Impl.UserDaoImpl;
 import matutu.giosan777.ge.DAO.UserDAO;
 
-/**
- * Created by giosa on 31.01.2017.
- */
+// giosan777 ...
 public class FactoryDAO {
     private static FactoryDAO ourInstance = null;
     private static UserDAO userDAO = null;

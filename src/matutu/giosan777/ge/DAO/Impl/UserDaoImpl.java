@@ -38,9 +38,11 @@ public class UserDaoImpl implements UserDAO {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             session.save(usersEntity);
-            session.beginTransaction().commit();
+
+            session.getTransaction().commit();
+            System.out.println("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Ошибка при вставке", JOptionPane.OK_OPTION);
+            e.printStackTrace();
         }finally {
             if (session != null && session.isOpen()) {
                 session.close();

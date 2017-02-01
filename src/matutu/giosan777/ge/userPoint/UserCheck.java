@@ -23,36 +23,45 @@ public class UserCheck {
     @Produces(MediaType.TEXT_HTML)
     @Path("/getUser")
     public String getUser(@QueryParam("mail")
-                             @DefaultValue("null")
-                                     String mail,
-                             @QueryParam("pass")
-                             @DefaultValue("0")
-                                     String pass) {
+                          @DefaultValue("null")
+                                  String mail,
+                          @QueryParam("pass")
+                          @DefaultValue("null")
+                                  String pass) {
         Collection collection;
         if (!mail.equals("nuul") && !(pass.length() < 6)) {
 
             collection = FactoryDAO.getInstance().getUserDao().getAllUser();
             Iterator iterator = collection.iterator();
             while (iterator.hasNext()) {
-                UsersEntity usersEntity =(UsersEntity) iterator.next();
+                UsersEntity usersEntity = (UsersEntity) iterator.next();
                 if (usersEntity.getMail().equals(mail) && usersEntity.getPass().equals(pass)) {
                     return "1";
                 }
             }
 
         }
-
-
         return "null";
     }
 
-
-
-}
-/*
-
     @GET
-    @Produces("text/plain")
-    public String getHelloText(@QueryParam("name") @DefaultValue("World") String name) {
-        return "Hello, " + name + "!";
-*/
+    @Produces(MediaType.TEXT_HTML)
+    @Path("/addUsers")
+    public String addUsers(@QueryParam("addMail")
+                           @DefaultValue("null")
+                           String addMail,
+                           @QueryParam("addPass")
+                           @DefaultValue("null")
+                           String addPass) {
+        UsersEntity usersEntity=new UsersEntity();
+        usersEntity.setMail(addMail);
+        usersEntity.setPass(addPass);
+        FactoryDAO.getInstance().getUserDao().addUser(usersEntity);
+        String s=getUser(addMail, addPass);
+        System.out.println(s);
+        if (s.equals("1")) {
+            return "1";
+        }
+        return "null";
+    }
+}

@@ -2,11 +2,9 @@ package matutu.giosan777.ge.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by giosa on 30.01.2017.
- */
+// giosa...
 @Entity
-@Table(name = "users", schema = "furti", catalog = "")
+@Table(name = "users", schema = "furti")
 public class UsersEntity {
     private int id;
     private String mail;
