@@ -7,13 +7,14 @@ package matutu.giosan777.ge.userPoint;
 
 import matutu.giosan777.ge.entity.UsersEntity;
 import matutu.giosan777.ge.factory.FactoryDAO;
+import matutu.giosan777.ge.users.User;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collection;
 import java.util.Iterator;
 
-@Path("user")
+@Path("UserGetAndAdd")
 public class UserCheck {
 
     public UserCheck() {
@@ -36,12 +37,12 @@ public class UserCheck {
             while (iterator.hasNext()) {
                 UsersEntity usersEntity = (UsersEntity) iterator.next();
                 if (usersEntity.getMail().equals(mail) && usersEntity.getPass().equals(pass)) {
-                    return "1";
+                    return "true";
                 }
             }
 
         }
-        return "null";
+        return "getnull";
     }
 
     @GET
@@ -49,19 +50,21 @@ public class UserCheck {
     @Path("/addUsers")
     public String addUsers(@QueryParam("addMail")
                            @DefaultValue("null")
-                           String addMail,
+                                   String addMail,
                            @QueryParam("addPass")
                            @DefaultValue("null")
-                           String addPass) {
-        UsersEntity usersEntity=new UsersEntity();
+                                   String addPass) {
+        UsersEntity usersEntity = new UsersEntity();
         usersEntity.setMail(addMail);
         usersEntity.setPass(addPass);
         FactoryDAO.getInstance().getUserDao().addUser(usersEntity);
-        String s=getUser(addMail, addPass);
+        String s = getUser(addMail, addPass);
         System.out.println(s);
         if (s.equals("1")) {
-            return "1";
+            return "regtrue";
         }
-        return "null";
+        return "regnull";
     }
+
+
 }

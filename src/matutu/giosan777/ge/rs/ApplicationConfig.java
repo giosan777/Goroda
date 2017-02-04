@@ -1,6 +1,7 @@
 package matutu.giosan777.ge.rs;
 
 import matutu.giosan777.ge.userPoint.UserCheck;
+import matutu.giosan777.ge.userPoint.UserIdGet;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -19,6 +20,7 @@ public class ApplicationConfig extends Application {
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(UserCheck.class);
+        resources.add(UserIdGet.class);
     }
 
 }
