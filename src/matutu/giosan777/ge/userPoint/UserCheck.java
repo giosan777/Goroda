@@ -23,10 +23,10 @@ public class UserCheck {
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/getUser")
-    public String getUser(@QueryParam("mail")
+    public String getUser(@QueryParam("getmail")
                           @DefaultValue("null")
                                   String mail,
-                          @QueryParam("pass")
+                          @QueryParam("getpass")
                           @DefaultValue("null")
                                   String pass) {
         Collection collection;
@@ -37,7 +37,7 @@ public class UserCheck {
             while (iterator.hasNext()) {
                 UsersEntity usersEntity = (UsersEntity) iterator.next();
                 if (usersEntity.getMail().equals(mail) && usersEntity.getPass().equals(pass)) {
-                    return "true";
+                    return "gettrue";
                 }
             }
 
@@ -60,7 +60,7 @@ public class UserCheck {
         FactoryDAO.getInstance().getUserDao().addUser(usersEntity);
         String s = getUser(addMail, addPass);
         System.out.println(s);
-        if (s.equals("1")) {
+        if (s.equals("gettrue")) {
             return "regtrue";
         }
         return "regnull";

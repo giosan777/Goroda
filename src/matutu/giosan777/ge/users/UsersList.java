@@ -26,7 +26,7 @@ public class UsersList {
             long id=usersArray.get(0);
             return id;
         }
-        return null;
+        return Long.valueOf(0);
     }
 
 

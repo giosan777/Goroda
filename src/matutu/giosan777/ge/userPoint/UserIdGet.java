@@ -1,6 +1,7 @@
 package matutu.giosan777.ge.userPoint;// giosan777 ...
 
 
+import matutu.giosan777.ge.Threads.SessionSetThread;
 import matutu.giosan777.ge.users.User;
 import matutu.giosan777.ge.users.UsersList;
 
@@ -24,6 +25,8 @@ public class UserIdGet {
     public String addUserID(@QueryParam("longID")
                             @DefaultValue("null")
                             String userID) {
+        SessionSetThread sessionSetThread=new SessionSetThread();
+        sessionSetThread.startThread();
         if (!userID.equals("nuu")) {
             long usID = Long.valueOf(userID);
             UsersList.getInstance().addUserId(usID);
