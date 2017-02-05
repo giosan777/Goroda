@@ -54,6 +54,9 @@ public class UserCheck {
                            @QueryParam("addPass")
                            @DefaultValue("null")
                                    String addPass) {
+        if ((getUser(addMail, addPass).equals("gettrue"))) {
+            return "userAddError";
+        }
         UsersEntity usersEntity = new UsersEntity();
         usersEntity.setMail(addMail);
         usersEntity.setPass(addPass);
