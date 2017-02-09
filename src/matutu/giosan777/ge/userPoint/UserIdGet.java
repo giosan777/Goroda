@@ -27,7 +27,7 @@ public class UserIdGet {
                             String userID) {
         SessionSetThread sessionSetThread=new SessionSetThread();
         sessionSetThread.startThread();
-        if (!userID.equals("nuu")) {
+        if (!userID.equals("nuul")) {
             long usID = Long.valueOf(userID);
             UsersList.getInstance().addUserId(usID);
             return "1";
