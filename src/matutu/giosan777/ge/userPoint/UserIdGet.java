@@ -25,7 +25,7 @@ public class UserIdGet {
     public String addUserID(@QueryParam("longID")
                             @DefaultValue("null")
                             String userID) {
-        SessionSetThread sessionSetThread=new SessionSetThread();
+        SessionSetThread sessionSetThread=SessionSetThread.getInstance();
         sessionSetThread.startThread();
         if (!userID.equals("nuul")) {
             long usID = Long.valueOf(userID);
