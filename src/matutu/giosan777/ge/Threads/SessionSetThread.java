@@ -21,10 +21,11 @@ public class SessionSetThread {
                 while (true) {
                     long id = UsersList.getInstance().getId();
                     if (id != 0) {
-                        if (User.getUserSesion1() != 0) {
+                        if (User.getUserSesion1() == 0) {
                             User.setUserSesion1(id);
-                        } else if (User.getUserSesion2() != 0) {
+                        } else if (User.getUserSesion2() == 0) {
                             User.setUserSesion2(id);
+                            User.addPara();
                         }
                     }
                 }

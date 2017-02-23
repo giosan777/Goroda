@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="furti@localhost" uuid="ea206dd4-fd30-4621-877a-eb2638fc4ddd">
+    <data-source source="LOCAL" name="furti@localhost" uuid="3153612a-6fe1-4e87-8e0f-38cc81eedd13">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -15,7 +15,7 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="443b5aa7-6cb1-4ef7-bb5d-696537923705">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="90f8c330-03d2-4305-ab71-daf8016f2e4d">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
@@ -31,6 +31,12 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
       <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-java-5.1.35-bin.jar</url>
+        </library>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.35/mysql-connector-license.txt</url>
         </library>

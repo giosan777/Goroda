@@ -17,7 +17,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="443b5aa7-6cb1-4ef7-bb5d-696537923705" />
+          <unit-entry name="hibernate.cfg.xml" value="90f8c330-03d2-4305-ab71-daf8016f2e4d" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -34,7 +34,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.0.0" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.2.3-5.2.3" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:6.0.5" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -44,5 +43,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="mysql-connector-java-5.1.40-bin" level="project" />
   </component>
 </module>

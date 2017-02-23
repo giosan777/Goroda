@@ -24,15 +24,15 @@ public class UserIdGet {
     @Path("/addUserId")
     public String addUserID(@QueryParam("longID")
                             @DefaultValue("null")
-                            String userID) {
+                            String longID) {
         SessionSetThread sessionSetThread=SessionSetThread.getInstance();
         sessionSetThread.startThread();
-        if (!userID.equals("nuul")) {
-            long usID = Long.valueOf(userID);
+        if (!longID.equals("nuul")) {
+            long usID = Long.valueOf(longID);
             UsersList.getInstance().addUserId(usID);
-            return "1";
+            return "addIdOk";
         }
-        return "AddIdnull";
+        return "addIdnull";
     }
 
 }

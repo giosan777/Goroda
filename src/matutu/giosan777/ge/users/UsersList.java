@@ -5,7 +5,7 @@ import java.util.List;
 
 public class UsersList {
     private static UsersList usersList = new UsersList();
-    List<Long> usersArray = new ArrayList<>();
+    private static List<Long> usersArray = new ArrayList<>();
 
     private UsersList() {
     }
@@ -24,6 +24,7 @@ public class UsersList {
     public synchronized Long getId() {
         if (!usersArray.isEmpty()) {
             long id=usersArray.get(0);
+            usersArray.remove(0);
             return id;
         }
         return Long.valueOf(0);

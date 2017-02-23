@@ -8,7 +8,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
-          <element id="library" level="project" name="mysql:mysql-connector-java:6.0.5" />
           <element id="library" level="project" name="javax.ws.rs-api-2.0" />
           <element id="file-copy" path="D:/Giosan777/Server/javax.ws.rs-api-2.0.jar" />
         </element>
